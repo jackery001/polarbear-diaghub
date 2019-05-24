@@ -1,0 +1,12 @@
+很鸡肋的提权，需要当前用户密码（当前用户可以为普通用户）
+运行如下：第一个参数是当前用户密码
+polarbear.exe <当前用户密码>
+
+执行流程：
+通过<https://github.com/SandboxEscaper/polarbearrepo/tree/master/bearlpe>提权将system32下面的license.rtf进行文件属性覆盖；
+当前用户可拥license.rtf有全部权限，然后copy FakeDll.dll覆盖license.rtf；
+polarbear.exe 会调用diaghub.exe ，diaghub调用FakeDll.dll得到系统权限。
+
+三个文件夹为源代码，vs2017编译
+
+
